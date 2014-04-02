@@ -79,7 +79,6 @@ BrowserRefreshLoop()
 
 BrowserRefreshSendEvent(browserWindowTitle)
 {
-  global preferredBrowser
   global browserNamePart
   
   BrowserRefreshLog("Sending refresh event to window title: " browserWindowTitle)
@@ -113,10 +112,6 @@ BrowserRefreshPrepare(notepadTitle, filePath, browserWindowTitle)
       BrowserRefreshErr("loopTimeout while waiting for window with title: " filePath)
       ExitApp
     }
-  }
-  else
-  {
-    ; open new tab
   } 
   
   halfScreenWidth := A_ScreenWidth // 2
